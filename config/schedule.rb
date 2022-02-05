@@ -7,8 +7,9 @@
 #
 set :output, "/path/to/my/cron_log.log"
 
-every 1.hours do
-    Notifications.sendNotifications
+every 1.minute do
+    # NotificationJob.set.perform_later(self)
+    runner "NotificationJob.perform()"
 end
 #
 # every 4.days do
