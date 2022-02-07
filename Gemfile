@@ -8,6 +8,9 @@ gem 'rspec-rails'
 gem 'slack-notifier'
 gem 'whenever', require: false
 
+# Dotenv
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
 
@@ -31,6 +34,9 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
+# background jobs with sidekiq
+gem "sidekiq", "~> 6.4.0"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"

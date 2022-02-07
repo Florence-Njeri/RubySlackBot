@@ -9,7 +9,7 @@ set :output, "/path/to/my/cron_log.log"
 
 every 1.minute do
     # NotificationJob.set.perform_later(self)
-    runner "NotificationJob.perform()"
+    runner "NotificationJob.perform("It is #{Time.now}, take a glass of water to give you life NOW!")"
 end
 #
 # every 4.days do
