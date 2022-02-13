@@ -1,0 +1,22 @@
+<h1>Ai Shawty, kunywa maji!!</h1>
+
+<%= form_with model: @root do |form| %>
+  <div>
+    <%= form.label :link %><br>
+    <%= form.text_field :link %>
+  </div>
+
+  <div>
+    <%= form.label :username %><br>
+    <%= form.text_area :username %>
+  </div>
+
+  <div>
+    <%= form.label :channel%><br>
+    <%= form.text_area :channel %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

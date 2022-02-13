@@ -1,7 +1,7 @@
 class NotificationJob < ApplicationJob
   queue_as :default
 
-    attr_reader: random_puns
+    attr_reader :random_puns
 
     def puns 
       @random_puns = { 
@@ -14,8 +14,24 @@ class NotificationJob < ApplicationJob
       }
     end
 
+    def notify_slack(webhook_url, channel, username, text)
+      payload = {
+        :channel  => channel,
+        :username => username,
+        :text     => text
+      }.to_json
+      cmd = "curl -X POST --data-urlencode 'payload=#{payload}' #{webhook_url}"
+      system(cmd)
+    end
+
     def perform()
-      SlackNotifier::notifier.ping "It is #{Time.now}, take a glass of water to give you life NOW!"
-      @random_puns(rand(6))
+      name = "Florence"
+      notify_slack(
+        ENV["WEBHOOK_URL"],
+        '#general',
+        random_puns(),
+        'Hey #{name} #{random_puns()}, take a glass of water to give you life NOW!.'
+      )
+      random_puns(rand(6))
     end
 end

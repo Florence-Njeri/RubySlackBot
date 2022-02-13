@@ -5,11 +5,11 @@
 
 # Example:
 #
-set :output, "/path/to/my/cron_log.log"
+set :output, "log/cron.log"
 
 every 1.minute do
     # NotificationJob.set.perform_later(self)
-    runner "NotificationJob.perform("It is #{Time.now}, take a glass of water to give you life NOW!")"
+    rake 'notifications_schedule:create'
 end
 #
 # every 4.days do
