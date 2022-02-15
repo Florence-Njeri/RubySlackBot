@@ -8,7 +8,6 @@
 set :output, "log/cron.log"
 
 every 1.minute do
-    # NotificationJob.set.perform_later(self)
     rake 'notifications_schedule:create'
 end
 #

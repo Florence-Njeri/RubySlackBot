@@ -32,6 +32,6 @@ class NotificationJob < ApplicationJob
         random_puns(),
         'Hey #{name} #{random_puns()}, take a glass of water to give you life NOW!.'
       )
-      random_puns(rand(6))
+      # random_puns(rand(6))
     end
 end
