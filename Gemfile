@@ -11,6 +11,8 @@ gem 'whenever', require: false
 # Dotenv
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem 'httparty'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
 
