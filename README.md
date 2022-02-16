@@ -1,26 +1,14 @@
-# README
+# SLACKBOT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is bot used to send hourly notifications to slack to notify the user to drink water.
 
-Things you may want to cover:
+### LIBRARIES USED
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby version ~ 3.1.0
+* Rails version ~ 7.0.2.2
+* [Httparty](https://github.com/jnunemaker/httparty) - for http requests
+* [Slack Incoming Webhook](https://api.slack.com/messaging/webhooks)
+* [Whenever](https://github.com/javan/whenever) to run cron jobs
+* Redis
 
 * Deployment instructions
-
-* ...
-# RubySlackBot
-# RubySlackBot
