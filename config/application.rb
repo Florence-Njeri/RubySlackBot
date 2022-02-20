@@ -6,6 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+WEBHOOK_URL = ENV['WEBHOOK_URL']
 
 module Slackbot
   class Application < Rails::Application

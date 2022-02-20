@@ -7,12 +7,8 @@
 #
 set :output, "log/cron.log"
 
-every 1.minute do
+every 1.hour do
     rake 'notifications_schedule:create'
 end
-#
-# every 4.days do
-#   runner "AnotherModel.prune_old_records"
-# end
 
 # Learn more: http://github.com/javan/whenever
