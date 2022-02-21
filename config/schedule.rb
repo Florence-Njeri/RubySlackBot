@@ -7,7 +7,7 @@
 #
 set :output, "log/cron.log"
 
-every 1.hour do
+every 1.minute do
     rake 'notifications_schedule:create'
 end
 
