@@ -8,7 +8,7 @@
 set :output, "log/cron.log"
 
 every 1.minute do
-    rake 'notifications_schedule:create'
+    rake 'notifications_schedule:schedule_slack_notifications'
 end
 
 # Learn more: http://github.com/javan/whenever
