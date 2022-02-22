@@ -1,5 +1,4 @@
 require 'httparty'
-require 'dotenv'
 class NotificationJob < ApplicationJob
   queue_as :default
 

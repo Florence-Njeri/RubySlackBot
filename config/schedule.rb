@@ -5,10 +5,10 @@
 
 # Example:
 #
-set :output, "log/cron.log"
+# set :output, "log/cron.log"
 
-every 1.minute do
-    rake 'notifications_schedule:schedule_slack_notifications'
-end
+# every 1.minute do
+#     rake 'bundle exec gem list rakeschedule_slack_notifications'
+# end
 
 # Learn more: http://github.com/javan/whenever
