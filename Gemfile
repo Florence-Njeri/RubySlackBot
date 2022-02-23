@@ -9,7 +9,7 @@ gem 'slack-notifier'
 gem 'whenever', require: false
 
 # Dotenv
-gem 'dotenv-rails', groups: [:development, :test], require: 'dotenv/tasks'
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'httparty'
 
