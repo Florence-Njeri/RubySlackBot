@@ -1,6 +1,7 @@
+require 'dotenv/tasks'
 namespace :notifications_schedule do
   desc "Send hourly remonders to drink water in Slack"
-  task :schedule_slack_notifications => :environment do
+  task :create => :environment do
     NotificationJob.perform_now
   end
 

@@ -3,7 +3,7 @@ class NotificationJob < ApplicationJob
   queue_as :default
 
     def notify_slack(webhook_url, channel, username, text)
-      # return unless ENV["WEBHOOK_URL"].present?
+      return unless ENV["WEBHOOK_URL"].present?
       HTTParty.post(webhook_url, :body => {
         :channel  => channel,
         :username => username,
@@ -21,9 +21,9 @@ class NotificationJob < ApplicationJob
         "If Apple made a car, would it have Windows?",
         "I used to be a baby but I grew out of it."
       ]
-      base_url = "https://hooks.slack.com/services/"
+      
       notify_slack(
-        base_url.concat(ENV["WEBHOOK_URL"].to_s),
+        ENV["WEBHOOK_URL"],
         '#general',
         'Water Reminder Bot',
         "Hey #{name}, wanna hear a joke? \n #{random_puns.sample()} \n It's now time to take a glass of water!!."
