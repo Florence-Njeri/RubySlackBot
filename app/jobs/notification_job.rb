@@ -21,9 +21,9 @@ class NotificationJob < ApplicationJob
         "If Apple made a car, would it have Windows?",
         "I used to be a baby but I grew out of it."
       ]
-      
+      base_url = "https://hooks.slack.com/services/"
       notify_slack(
-        ENV["WEBHOOK_URL"],
+        base_url.concat(ENV["WEBHOOK_URL"].to_s),
         '#general',
         'Water Reminder Bot',
         "Hey #{name}, wanna hear a joke? \n #{random_puns.sample()} \n It's now time to take a glass of water!!."
