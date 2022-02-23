@@ -6,7 +6,7 @@ ruby "3.1.0"
 gem 'rspec'
 gem 'rspec-rails'
 gem 'slack-notifier'
-# gem 'whenever', require: false
+gem 'whenever', require: false
 
 # Dotenv
 gem 'dotenv-rails', groups: [:development, :test]
