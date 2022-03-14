@@ -12,3 +12,6 @@ This is bot used to send hourly notifications to slack to notify the user to dri
 * Redis
 
 * Deployment instructions
+
+## Article
+[Schedule Jobs in Ruby on Rails with Whenever gem](https://betterprogramming.pub/schedule-jobs-in-ruby-on-rails-with-whenever-gem-7cb12f0a8a9e)
